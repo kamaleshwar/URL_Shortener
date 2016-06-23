@@ -21,7 +21,7 @@ function loadData() {
     
     if (urlButton.text() !== 'Copy') {
 
-        if(data.longURL.indexOf('localhost') > -1) {
+        if(data.longURL.indexOf('slash.ws') > -1) {
             errorDiv.toggleClass('show');
             errorOccured = "True";                
 
@@ -34,7 +34,7 @@ function loadData() {
         }
         
         $.ajax({
-        url: "http://localhost:3000/",
+        url: "http://slash.ws/",
         type: "POST",
         dataType: "json",
         data: JSON.stringify(data),

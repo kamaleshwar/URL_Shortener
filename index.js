@@ -46,7 +46,7 @@ app.post('/', function(req, res) {
 		if(err) {
 			throw err;
 		}
-		var slashedURL = "localhost:3000/";
+		var slashedURL = "http://slash.ws/";
 		slashedURL += shortURL;
 
 		res.json(slashedURL);
