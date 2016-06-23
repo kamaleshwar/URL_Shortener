@@ -40,8 +40,7 @@ app.post('/', function(req, res) {
 						        .toString('hex') // convert to hexadecimal format
 						        .slice(0,limit);   // return required number of characters
 							}
-	var shortURL = randomValueHex(urlLength, limit);
-	// var result = "http://localhost:3000/"						
+	var shortURL = randomValueHex(urlLength, limit);						
 	
 	urlMod.addURL(entryObj, shortURL, function(err, entryObj) {
 		if(err) {
