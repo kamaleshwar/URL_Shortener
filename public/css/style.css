@@ -3,15 +3,11 @@
 	position: absolute;	
 	width: 30%;		
 	left: 0;
-	right: 0;
-	top: 0;
+	right: 0;	
 	bottom: 0;
-	margin:auto;	
+	top:50%;
+	margin:0 auto;	
 	min-width: 200px;
-}
-
-.form-control {
-
 }
 
 #longURL {	
