@@ -4,8 +4,13 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+html{
+	min-height: 100%	
+}
+
 body {
     margin-top: 50px; /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    overflow: hidden;
 }
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */

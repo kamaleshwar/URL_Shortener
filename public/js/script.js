@@ -6,22 +6,16 @@ function loadData() {
     var data = {};
     data.longURL = $('#longURL').val();
     var errorDiv = $('.errorDiv');
+    var emptyDiv = $('.emptyURL');
     var errorOccured;
     var urlButton = $("#slashBtn");
     var emptyURL = $('#emptyURL');
 
 
-    if(data.longURL == ''){
-        emptyURL.css('hidden', 'visibility');
-        urlButton.focus(function(){
-                this.blur();
-            });
-        return false;
-    }
-    
     if (urlButton.text() !== 'Copy') {
 
-        if(data.longURL.indexOf('localhost') > -1) {
+        if(data.longURL.indexOf('slash.ws') > -1) {
+			
             errorDiv.toggleClass('show');
             errorOccured = "True";                
 
@@ -33,6 +27,20 @@ function loadData() {
             return false;
         }
         
+        else if(data.longURL === "") {
+            console.log("matched");
+            emptyDiv.toggleClass('show');
+            errorOccured = "True";                
+
+            setTimeout(function () {
+                if(errorOccured) {
+                    emptyDiv.toggleClass('show');         
+                }        
+            }, 3000);   
+            return false;
+        }
+
+
         $.ajax({
         url: "/add",
         type: "POST",
